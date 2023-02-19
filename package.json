@@ -4,7 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start --parallel",
+    "build:watch": "lerna run build:watch --parallel",
+    "client": "cd ./client && npm start",
+    "dev": "concurrently --kill-others \"npm run client\" \"npm run server\" "
   },
   "private": true,
   "dependencies": {
