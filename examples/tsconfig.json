@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "jsx": "react"
+  },
+  "paths": {
+    "packages/@auth-provider-router": ["../packages/@auth-provider-router"]
+  },
+  "references": [{ "path": "../packages/@auth-provider-router" }],
+  "include": ["src"],
+
+  "exclude": ["./src/**/*.test.ts", "./src/**/*.test.tsx", "node_modules"]
+}
