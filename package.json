@@ -6,9 +6,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
-    "build:watch": "lerna run build:watch --parallel",
-    "client": "cd ./client && npm start",
-    "dev": "concurrently --kill-others \"npm run client\" \"npm run server\" "
+    "build:watch": "lerna run build:watch --parallel"
   },
   "private": true,
   "dependencies": {

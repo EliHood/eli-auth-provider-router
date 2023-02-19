@@ -3,12 +3,14 @@
   "compilerOptions": {
     "baseUrl": "./",
     "jsx": "react",
-    "composite": true
+    "composite": false,
+    "outDir": "./dist",
+    "declaration": false
   },
   "paths": {
     "@core/auth-provider-router": ["../packages/@core/auth-provider-router"]
   },
-  "references": [{ "path": "../packages/@core/auth-provider-router" }],
+  "references": [{ "path": "../packages/@core:auth-provider-router" }],
   "include": ["src"],
 
   "exclude": ["./src/**/*.test.ts", "./src/**/*.test.tsx", "node_modules"]

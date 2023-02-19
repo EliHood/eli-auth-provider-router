@@ -9,7 +9,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   devtool: "source-map",
-
   module: {
     rules: [
       {
@@ -76,11 +75,5 @@ module.exports = {
 
   resolve: {
     extensions: [".js", ".ts", ".jsx", ".tsx"],
-    alias: {
-      "@auth-provider-router": path.resolve(
-        __dirname,
-        "../packages/@auth-provider-router"
-      ),
-    },
   },
 };

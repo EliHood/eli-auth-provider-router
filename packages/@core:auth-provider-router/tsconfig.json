@@ -3,12 +3,12 @@
   "compilerOptions": {
     "outDir": "dist",
     "composite": true,
-    "rootDir": "./",
     "baseUrl": "./",
+    "rootDir": "./",
     "strict": false,
     "esModuleInterop": true,
     "jsx": "react"
   },
-  "include": ["./"],
+  "include": ["src", "./index.ts"],
   "exclude": ["node_modules", "**/__tests__/*", "**/__e2e__/*"]
 }

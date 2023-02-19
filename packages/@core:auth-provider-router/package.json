@@ -15,11 +15,11 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
-    "start": "webpack serve --config webpack.config.js",
+    "start": "tsc --watch",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "yarn run lint --fix",
-    "build": "webpack --config webpack.config.js",
-    "build:watch": "webpack watch --config webpack.config.js",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
     "test": "jest"
   },
   "eslintConfig": {
