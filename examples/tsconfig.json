@@ -2,7 +2,8 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "jsx": "react"
+    "jsx": "react",
+    "composite": true
   },
   "paths": {
     "packages/@auth-provider-router": ["../packages/@auth-provider-router"]
