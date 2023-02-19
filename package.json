@@ -4,11 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "heroku-prebuild": "yarn bootstrap",
+    "heroku-prebuild": "yarn install --production=false",
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
     "build:watch": "lerna run build:watch --parallel",
-    "build": "lerna run build"
+    "build": "lerna bootstrap && lerna run build"
   },
   "private": true,
   "dependencies": {
