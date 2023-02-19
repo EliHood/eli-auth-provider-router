@@ -7,7 +7,7 @@
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
     "build:watch": "lerna run build:watch --parallel",
-    "postinstall": "yarn start"
+    "postinstall": "yarn bootstrap && yarn start"
   },
   "private": true,
   "dependencies": {
