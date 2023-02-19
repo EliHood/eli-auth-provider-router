@@ -8,7 +8,7 @@
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
     "build:watch": "lerna run build:watch --parallel",
-    "build": "lerna bootstrap && lerna run build"
+    "build": "lerna run build"
   },
   "private": true,
   "dependencies": {
