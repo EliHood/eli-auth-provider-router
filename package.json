@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "heroku-prebuild": "yarn install",
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
     "build:watch": "lerna run build:watch --parallel",
