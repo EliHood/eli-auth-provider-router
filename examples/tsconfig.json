@@ -6,9 +6,9 @@
     "composite": true
   },
   "paths": {
-    "packages/@auth-provider-router": ["../packages/@auth-provider-router"]
+    "@core/auth-provider-router": ["../packages/@core/auth-provider-router"]
   },
-  "references": [{ "path": "../packages/@auth-provider-router" }],
+  "references": [{ "path": "../packages/@core/auth-provider-router" }],
   "include": ["src"],
 
   "exclude": ["./src/**/*.test.ts", "./src/**/*.test.tsx", "node_modules"]
