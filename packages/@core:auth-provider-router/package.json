@@ -20,6 +20,7 @@
     "lint:fix": "yarn run lint --fix",
     "build": "tsc",
     "build:watch": "tsc --watch",
+    "postinstall": "yarn run build",
     "test": "jest"
   },
   "eslintConfig": {
