@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:6-alpine'
+            image 'node:16.16.0-alpine'
             args '-u root:root'
         }
     }
@@ -11,7 +11,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "npm i -g npx"
                 sh 'yarn install --ignore-engines'
             }
         }
