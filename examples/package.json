@@ -10,6 +10,7 @@
     "tslint-config-prettier": "^1.18.0"
   },
   "scripts": {
+    "heroku-prebuild": "yarn install --dev",
     "start": "webpack serve --config webpack.config.js",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "yarn run lint --fix",
