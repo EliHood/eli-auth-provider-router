@@ -8,8 +8,7 @@
     "lint:fix": "yarn run lint --fix",
     "build": "webpack --config webpack.config.js",
     "build:watch": "webpack watch --config webpack.config.js",
-    "server": "node server.js",
-    "postinstall": "yarn server"
+    "server": "node server.js"
   },
   "browserslist": {
     "production": [
