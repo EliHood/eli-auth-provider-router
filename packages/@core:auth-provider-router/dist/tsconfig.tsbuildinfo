@@ -706,6 +706,11 @@
         "signature": "7fb6faf1006c3503d44e4922c8c65772ddc98e92bad7c2ae2d5db123f3e297b3",
         "affectsGlobalScope": true
       },
+      "../../../node_modules/@types/react-dom/index.d.ts": {
+        "version": "d035565d969404edfb3dfce8a2e762fbed98f6dfd7388ac01af173aa1ef665bd",
+        "signature": "d035565d969404edfb3dfce8a2e762fbed98f6dfd7388ac01af173aa1ef665bd",
+        "affectsGlobalScope": false
+      },
       "../../../node_modules/@types/react-router/ts4.6/index.d.ts": {
         "version": "a60ee9fe79c03541263af31ff0f8c15ad1eed6edeb9ac187ce550601474911b7",
         "signature": "a60ee9fe79c03541263af31ff0f8c15ad1eed6edeb9ac187ce550601474911b7",
@@ -1486,6 +1491,10 @@
       ],
       "../../../node_modules/@types/range-parser/index.d.ts": [
         "../../../node_modules/@types/node/ts4.8/util.d.ts"
+      ],
+      "../../../node_modules/@types/react-dom/index.d.ts": [
+        "../../../node_modules/@types/node/ts4.8/util.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
       ],
       "../../../node_modules/@types/react-router-dom/index.d.ts": [
         "../../../node_modules/@types/history/index.d.ts",
@@ -2449,16 +2458,20 @@
       "../../../node_modules/@types/range-parser/index.d.ts": [
         "../../../node_modules/@types/node/ts4.8/util.d.ts"
       ],
+      "../../../node_modules/@types/react-dom/index.d.ts": [
+        "../../../node_modules/@types/node/ts4.8/util.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
       "../../../node_modules/@types/react-router-dom/index.d.ts": [
         "../../../node_modules/@types/history/index.d.ts",
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
-        "../../../node_modules/@types/react-router/node_modules/@types/react/index.d.ts",
-        "../../../node_modules/@types/react-router/ts4.6/index.d.ts"
+        "../../../node_modules/@types/react-router/ts4.6/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
       ],
       "../../../node_modules/@types/react-router/ts4.6/index.d.ts": [
         "../../../node_modules/@types/history/index.d.ts",
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
-        "../../../node_modules/@types/react-router/node_modules/@types/react/index.d.ts"
+        "../../../node_modules/@types/react/index.d.ts"
       ],
       "../../../node_modules/@types/react/global.d.ts": [
         "../../../node_modules/@types/node/ts4.8/util.d.ts"

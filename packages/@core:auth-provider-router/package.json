@@ -2,7 +2,11 @@
   "name": "@core/auth-provider-router",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.js",
   "dependencies": {
+    "@types/express-serve-static-core": "^4.17.33",
+    "@types/node": "^18.14.0",
+    "@types/react-dom": "^18.0.11",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-router": "^5.1.2",
