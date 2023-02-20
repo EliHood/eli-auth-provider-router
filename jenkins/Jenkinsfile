@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo yarn install'
+                sh 'yarn install'
             }
         }
         stage('Deliver') {
