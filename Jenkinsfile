@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "npm install -g yarn"
+                sh "npm install -g nx"
                 sh 'yarn install --ignore-engines'
             }
         }
