@@ -1,1 +1,0 @@
-export { AuthProviderRouter } from "./src";
