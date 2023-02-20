@@ -1,1 +1,1 @@
-web: yarn bootstrap && yarn build
+web: yarn bootstrap 
