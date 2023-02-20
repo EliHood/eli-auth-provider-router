@@ -1,98 +1,6 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/App.tsx":
-/*!*********************!*\
-  !*** ./src/App.tsx ***!
-  \*********************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ App; }
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _core_auth_provider_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/auth-provider-router */ "../packages/@core:auth-provider-router/index.ts");
-
-
-function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_core_auth_provider_router__WEBPACK_IMPORTED_MODULE_1__.AuthProviderRouter, null));
-}
-
-/***/ }),
-
-/***/ "./src/bootstrap.tsx":
-/*!***************************!*\
-  !*** ./src/bootstrap.tsx ***!
-  \***************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.tsx");
-
-
-
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById("root"));
-
-/***/ }),
-
-/***/ "../packages/@core:auth-provider-router/index.ts":
-/*!*******************************************************!*\
-  !*** ../packages/@core:auth-provider-router/index.ts ***!
-  \*******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AuthProviderRouter": function() { return /* reexport safe */ _src__WEBPACK_IMPORTED_MODULE_0__.AuthProviderRouter; }
-/* harmony export */ });
-/* harmony import */ var _src__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src */ "../packages/@core:auth-provider-router/src/index.ts");
-
-
-/***/ }),
-
-/***/ "../packages/@core:auth-provider-router/src/AuthProviderRouter.tsx":
-/*!*************************************************************************!*\
-  !*** ../packages/@core:auth-provider-router/src/AuthProviderRouter.tsx ***!
-  \*************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AuthProviderRouter": function() { return /* binding */ AuthProviderRouter; }
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
-
-function AuthProviderRouter() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, " Hello");
-}
-
-/***/ }),
-
-/***/ "../packages/@core:auth-provider-router/src/index.ts":
-/*!***********************************************************!*\
-  !*** ../packages/@core:auth-provider-router/src/index.ts ***!
-  \***********************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AuthProviderRouter": function() { return /* reexport safe */ _AuthProviderRouter__WEBPACK_IMPORTED_MODULE_0__.AuthProviderRouter; }
-/* harmony export */ });
-/* harmony import */ var _AuthProviderRouter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AuthProviderRouter */ "../packages/@core:auth-provider-router/src/AuthProviderRouter.tsx");
-
-
-/***/ }),
-
 /***/ "./node_modules/react-dom/cjs/react-dom.development.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
@@ -33435,6 +33343,98 @@ if (
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/scheduler.development.js */ "./node_modules/scheduler/cjs/scheduler.development.js");
 }
+
+
+/***/ }),
+
+/***/ "./src/App.tsx":
+/*!*********************!*\
+  !*** ./src/App.tsx ***!
+  \*********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ App; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_auth_provider_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/auth-provider-router */ "../packages/@core:auth-provider-router/index.ts");
+
+
+function App() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_core_auth_provider_router__WEBPACK_IMPORTED_MODULE_1__.AuthProviderRouter, null));
+}
+
+/***/ }),
+
+/***/ "./src/bootstrap.tsx":
+/*!***************************!*\
+  !*** ./src/bootstrap.tsx ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.tsx");
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById("root"));
+
+/***/ }),
+
+/***/ "../packages/@core:auth-provider-router/index.ts":
+/*!*******************************************************!*\
+  !*** ../packages/@core:auth-provider-router/index.ts ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AuthProviderRouter": function() { return /* reexport safe */ _src__WEBPACK_IMPORTED_MODULE_0__.AuthProviderRouter; }
+/* harmony export */ });
+/* harmony import */ var _src__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src */ "../packages/@core:auth-provider-router/src/index.ts");
+
+
+/***/ }),
+
+/***/ "../packages/@core:auth-provider-router/src/AuthProviderRouter.tsx":
+/*!*************************************************************************!*\
+  !*** ../packages/@core:auth-provider-router/src/AuthProviderRouter.tsx ***!
+  \*************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AuthProviderRouter": function() { return /* binding */ AuthProviderRouter; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+
+function AuthProviderRouter() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, " Hello");
+}
+
+/***/ }),
+
+/***/ "../packages/@core:auth-provider-router/src/index.ts":
+/*!***********************************************************!*\
+  !*** ../packages/@core:auth-provider-router/src/index.ts ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AuthProviderRouter": function() { return /* reexport safe */ _AuthProviderRouter__WEBPACK_IMPORTED_MODULE_0__.AuthProviderRouter; }
+/* harmony export */ });
+/* harmony import */ var _AuthProviderRouter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AuthProviderRouter */ "../packages/@core:auth-provider-router/src/AuthProviderRouter.tsx");
 
 
 /***/ }),

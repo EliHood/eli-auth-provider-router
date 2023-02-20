@@ -206,12 +206,12 @@
         "signature": "cd6efb9467a8b6338ece2e2855e37765700f2cd061ca54b01b33878cf5c7677e",
         "affectsGlobalScope": true
       },
-      "../../../node_modules/@types/react/global.d.ts": {
+      "../node_modules/@types/react/global.d.ts": {
         "version": "2bbdfc5ed049f38787376bb01b7bcfe5299eac853c76c16a3e21ab0279078314",
         "signature": "2bbdfc5ed049f38787376bb01b7bcfe5299eac853c76c16a3e21ab0279078314",
         "affectsGlobalScope": true
       },
-      "../../../node_modules/@types/react/node_modules/csstype/index.d.ts": {
+      "../node_modules/csstype/index.d.ts": {
         "version": "c609b66caa6f5b80a9166ce7505730b398ae7c0eddc0c1feed28a17814cf8609",
         "signature": "c609b66caa6f5b80a9166ce7505730b398ae7c0eddc0c1feed28a17814cf8609",
         "affectsGlobalScope": false
@@ -221,7 +221,7 @@
         "signature": "6a386ff939f180ae8ef064699d8b7b6e62bc2731a62d7fbf5e02589383838dea",
         "affectsGlobalScope": false
       },
-      "../../../node_modules/@types/react/index.d.ts": {
+      "../node_modules/@types/react/index.d.ts": {
         "version": "d1432e292b0ffbd5282131a2bde906544c4cbfbec89c8243dc13c39455fa57ac",
         "signature": "d1432e292b0ffbd5282131a2bde906544c4cbfbec89c8243dc13c39455fa57ac",
         "affectsGlobalScope": true
@@ -686,7 +686,7 @@
         "signature": "2b8264b2fefd7367e0f20e2c04eed5d3038831fe00f5efbc110ff0131aab899b",
         "affectsGlobalScope": false
       },
-      "../../../node_modules/@types/react-router/node_modules/@types/react/global.d.ts": {
+      "../../../node_modules/@types/react/global.d.ts": {
         "version": "bbdf156fea2fabed31a569445835aeedcc33643d404fcbaa54541f06c109df3f",
         "signature": "bbdf156fea2fabed31a569445835aeedcc33643d404fcbaa54541f06c109df3f",
         "affectsGlobalScope": true
@@ -701,7 +701,7 @@
         "signature": "f5a8b384f182b3851cec3596ccc96cb7464f8d3469f48c74bf2befb782a19de5",
         "affectsGlobalScope": false
       },
-      "../../../node_modules/@types/react-router/node_modules/@types/react/index.d.ts": {
+      "../../../node_modules/@types/react/index.d.ts": {
         "version": "7fb6faf1006c3503d44e4922c8c65772ddc98e92bad7c2ae2d5db123f3e297b3",
         "signature": "7fb6faf1006c3503d44e4922c8c65772ddc98e92bad7c2ae2d5db123f3e297b3",
         "affectsGlobalScope": true
@@ -710,11 +710,6 @@
         "version": "a60ee9fe79c03541263af31ff0f8c15ad1eed6edeb9ac187ce550601474911b7",
         "signature": "a60ee9fe79c03541263af31ff0f8c15ad1eed6edeb9ac187ce550601474911b7",
         "affectsGlobalScope": false
-      },
-      "../../../node_modules/@types/react-router-dom/node_modules/@types/react/index.d.ts": {
-        "version": "7fb6faf1006c3503d44e4922c8c65772ddc98e92bad7c2ae2d5db123f3e297b3",
-        "signature": "7fb6faf1006c3503d44e4922c8c65772ddc98e92bad7c2ae2d5db123f3e297b3",
-        "affectsGlobalScope": true
       },
       "../../../node_modules/@types/react-router-dom/index.d.ts": {
         "version": "8017277c3843df85296d8730f9edf097d68d7d5f9bc9d8124fcacf17ecfd487e",
@@ -982,6 +977,7 @@
       "outDir": "./",
       "baseUrl": "..",
       "jsx": 2,
+      "watch": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
@@ -1494,30 +1490,13 @@
       "../../../node_modules/@types/react-router-dom/index.d.ts": [
         "../../../node_modules/@types/history/index.d.ts",
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
-        "../../../node_modules/@types/react-router/node_modules/@types/react/index.d.ts",
-        "../../../node_modules/@types/react-router/ts4.6/index.d.ts"
-      ],
-      "../../../node_modules/@types/react-router-dom/node_modules/@types/react/index.d.ts": [
-        "../../../node_modules/@types/node/ts4.8/util.d.ts",
-        "../../../node_modules/@types/prop-types/index.d.ts",
-        "../../../node_modules/@types/react-router-dom/node_modules/@types/react/global.d.ts",
-        "../../../node_modules/@types/scheduler/tracing.d.ts",
-        "../../../node_modules/csstype/index.d.ts"
-      ],
-      "../../../node_modules/@types/react-router/node_modules/@types/react/global.d.ts": [
-        "../../../node_modules/@types/node/ts4.8/util.d.ts"
-      ],
-      "../../../node_modules/@types/react-router/node_modules/@types/react/index.d.ts": [
-        "../../../node_modules/@types/node/ts4.8/util.d.ts",
-        "../../../node_modules/@types/prop-types/index.d.ts",
-        "../../../node_modules/@types/react-router/node_modules/@types/react/global.d.ts",
-        "../../../node_modules/@types/scheduler/tracing.d.ts",
-        "../../../node_modules/csstype/index.d.ts"
+        "../../../node_modules/@types/react-router/ts4.6/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
       ],
       "../../../node_modules/@types/react-router/ts4.6/index.d.ts": [
         "../../../node_modules/@types/history/index.d.ts",
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
-        "../../../node_modules/@types/react-router/node_modules/@types/react/index.d.ts"
+        "../../../node_modules/@types/react/index.d.ts"
       ],
       "../../../node_modules/@types/react/global.d.ts": [
         "../../../node_modules/@types/node/ts4.8/util.d.ts"
@@ -1526,10 +1505,8 @@
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
         "../../../node_modules/@types/prop-types/index.d.ts",
         "../../../node_modules/@types/react/global.d.ts",
-        "../../../node_modules/@types/react/node_modules/csstype/index.d.ts"
-      ],
-      "../../../node_modules/@types/react/node_modules/csstype/index.d.ts": [
-        "../../../node_modules/@types/node/ts4.8/util.d.ts"
+        "../../../node_modules/@types/scheduler/tracing.d.ts",
+        "../../../node_modules/csstype/index.d.ts"
       ],
       "../../../node_modules/@types/retry/index.d.ts": [
         "../../../node_modules/@types/node/ts4.8/util.d.ts"
@@ -1944,9 +1921,21 @@
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
         "../src/index.ts"
       ],
+      "../node_modules/@types/react/global.d.ts": [
+        "../../../node_modules/@types/node/ts4.8/util.d.ts"
+      ],
+      "../node_modules/@types/react/index.d.ts": [
+        "../../../node_modules/@types/node/ts4.8/util.d.ts",
+        "../../../node_modules/@types/prop-types/index.d.ts",
+        "../node_modules/@types/react/global.d.ts",
+        "../node_modules/csstype/index.d.ts"
+      ],
+      "../node_modules/csstype/index.d.ts": [
+        "../../../node_modules/@types/node/ts4.8/util.d.ts"
+      ],
       "../src/authproviderrouter.tsx": [
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
-        "../../../node_modules/@types/react/index.d.ts"
+        "../node_modules/@types/react/index.d.ts"
       ],
       "../src/index.ts": [
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
@@ -2466,23 +2455,6 @@
         "../../../node_modules/@types/react-router/node_modules/@types/react/index.d.ts",
         "../../../node_modules/@types/react-router/ts4.6/index.d.ts"
       ],
-      "../../../node_modules/@types/react-router-dom/node_modules/@types/react/index.d.ts": [
-        "../../../node_modules/@types/node/ts4.8/util.d.ts",
-        "../../../node_modules/@types/prop-types/index.d.ts",
-        "../../../node_modules/@types/react-router-dom/node_modules/@types/react/global.d.ts",
-        "../../../node_modules/@types/scheduler/tracing.d.ts",
-        "../../../node_modules/csstype/index.d.ts"
-      ],
-      "../../../node_modules/@types/react-router/node_modules/@types/react/global.d.ts": [
-        "../../../node_modules/@types/node/ts4.8/util.d.ts"
-      ],
-      "../../../node_modules/@types/react-router/node_modules/@types/react/index.d.ts": [
-        "../../../node_modules/@types/node/ts4.8/util.d.ts",
-        "../../../node_modules/@types/prop-types/index.d.ts",
-        "../../../node_modules/@types/react-router/node_modules/@types/react/global.d.ts",
-        "../../../node_modules/@types/scheduler/tracing.d.ts",
-        "../../../node_modules/csstype/index.d.ts"
-      ],
       "../../../node_modules/@types/react-router/ts4.6/index.d.ts": [
         "../../../node_modules/@types/history/index.d.ts",
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
@@ -2495,10 +2467,8 @@
         "../../../node_modules/@types/node/ts4.8/util.d.ts",
         "../../../node_modules/@types/prop-types/index.d.ts",
         "../../../node_modules/@types/react/global.d.ts",
-        "../../../node_modules/@types/react/node_modules/csstype/index.d.ts"
-      ],
-      "../../../node_modules/@types/react/node_modules/csstype/index.d.ts": [
-        "../../../node_modules/@types/node/ts4.8/util.d.ts"
+        "../../../node_modules/@types/scheduler/tracing.d.ts",
+        "../../../node_modules/csstype/index.d.ts"
       ],
       "../../../node_modules/@types/retry/index.d.ts": [
         "../../../node_modules/@types/node/ts4.8/util.d.ts"
@@ -2911,6 +2881,18 @@
       ],
       "../index.ts": [
         "../src/index.ts"
+      ],
+      "../node_modules/@types/react/global.d.ts": [
+        "../../../node_modules/@types/node/ts4.8/util.d.ts"
+      ],
+      "../node_modules/@types/react/index.d.ts": [
+        "../../../node_modules/@types/node/ts4.8/util.d.ts",
+        "../../../node_modules/@types/prop-types/index.d.ts",
+        "../node_modules/@types/react/global.d.ts",
+        "../node_modules/csstype/index.d.ts"
+      ],
+      "../node_modules/csstype/index.d.ts": [
+        "../../../node_modules/@types/node/ts4.8/util.d.ts"
       ],
       "../src/index.ts": [
         "../src/authproviderrouter.tsx"
