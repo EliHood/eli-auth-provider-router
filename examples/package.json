@@ -6,7 +6,7 @@
     "start": "webpack serve --config webpack.config.js",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "yarn run lint --fix",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js && yarn server",
     "build:watch": "webpack watch --config webpack.config.js",
     "server": "node server.js"
   },
