@@ -8,7 +8,7 @@
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
     "build:watch": "lerna run build:watch --parallel",
-    "build": "lerna run build"
+    "build": "cd ./examples && yarn build"
   },
   "private": true,
   "dependencies": {
