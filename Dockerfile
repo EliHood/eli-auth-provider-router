@@ -7,3 +7,4 @@ USER root:root
 RUN yarn install --ignore-engines
 EXPOSE 3001
 CMD ["yarn", "build"]
+CMD ["yarn", "server"]
