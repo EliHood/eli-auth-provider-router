@@ -6,5 +6,4 @@ RUN apk add --update python3 make g++ && rm -rf /var/cache/apk/*
 USER root:root
 RUN yarn install --ignore-engines
 EXPOSE 3001
-CMD ["yarn", "build"]
-CMD ["yarn", "server"]
+CMD ["yarn build", "yarn server"]
