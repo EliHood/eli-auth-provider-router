@@ -75,5 +75,14 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "transform-class-properties": "^1.0.0-beta"
+  },
+  "resolutions": {
+    "@types/react": "16.9.9"
   }
 }

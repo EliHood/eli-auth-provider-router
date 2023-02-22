@@ -6,7 +6,13 @@ module.exports = {
   mode: "development",
   output: {
     filename: "index.js",
+    libraryTarget: "commonjs2",
     path: path.resolve(__dirname, "dist"),
+  },
+  target: "web",
+  externals: {
+    react: "commonjs react",
+    "react-dom": "commonjs react-dom",
   },
   devtool: "source-map",
   module: {
@@ -72,7 +78,6 @@ module.exports = {
       contentBase: path.join(__dirname, "dist"),
     }),
   ],
-
   resolve: {
     extensions: [".js", ".ts", ".jsx", ".tsx"],
   },
