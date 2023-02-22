@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   output: {
     filename: "index.js",
-    libraryTarget: "commonjs",
+    libraryTarget: "umd",
     path: path.resolve(__dirname, "dist"),
   },
   devtool: "source-map",
