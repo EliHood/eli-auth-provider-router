@@ -13,6 +13,11 @@ pipeline {
                 sh 'yarn install --ignore-engines'
             }
         }
+        stage('Deploy'){
+            steps{
+                sh 'git push heroku develop:master '
+            }
+        }
         stage('Deliver') {
             steps {
                 sh "chmod +x ./jenkins/scripts/deliver.sh" 
