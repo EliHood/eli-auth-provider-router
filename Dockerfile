@@ -7,4 +7,4 @@ USER root:root
 RUN yarn install --ignore-engines
 RUN yarn bootstrap
 EXPOSE 3001
-CMD ["yarn", "build"]
+CMD ["yarn", "build:prod"]

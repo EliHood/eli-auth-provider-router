@@ -7,6 +7,7 @@
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
     "build:watch": "lerna run build:watch --parallel",
+    "build:docker": "cd ./examples && yarn build:docker",
     "build": "cd ./examples && yarn build",
     "server": "cd ./examples && yarn server"
   },
