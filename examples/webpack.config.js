@@ -63,8 +63,9 @@ module.exports = {
     },
     historyApiFallback: true,
     compress: true,
-    port: 9003,
+    port: 3001,
     host: "0.0.0.0",
+    allowedHosts: "all",
   },
   plugins: [
     new HtmlWebpackPlugin({
