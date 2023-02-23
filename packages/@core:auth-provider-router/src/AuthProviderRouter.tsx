@@ -4,5 +4,5 @@ export function AuthProviderRouter() {
   useEffect(() => {
     console.log("tesring");
   }, []);
-  return <h1>Testigng </h1>;
+  return <h1>Testing </h1>;
 }
