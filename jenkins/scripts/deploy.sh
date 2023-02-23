@@ -3,10 +3,10 @@ set -e
 
 # deal with remote
 echo "Checking if remote exists..."
-if ! git ls-remote heroku; then
-  echo "Adding heroku remote..."
-  git remote add heroku git@heroku.com:eli-auth-provider-router.git
-fi
+# if ! git ls-remote heroku; then
+#   echo "Adding heroku remote..."
+#   git remote add heroku git@heroku.com:eli-auth-provider-router.git
+# fi
 
 # push only origin/master to heroku/master - will do nothing if
 # master doesn't change.
