@@ -15,7 +15,9 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-                sh 'git push -u heroku master'
+               withCredentials([gitUsernamePassword(credentialsId: 'cidi_github', gitToolName: 'git-tool')]) {
+                    sh 'git fetch --all'
+                }
             }
         }
         stage('Deliver') {
