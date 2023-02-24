@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-               withCredentials([gitUsernamePassword(credentialsId: 'heroku-api-key', passwordVariable: 'Tapion133', usernameVariable: 'EliHood' gitToolName: 'git-tool')]) {
+               withCredentials([gitUsernamePassword(credentialsId: 'heroku-api-key', passwordVariable: 'Tapion133', usernameVariable: 'EliHood', gitToolName: 'git-tool')]) {
                 sh 'git fetch --all'
                 }
             }
