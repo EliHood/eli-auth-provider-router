@@ -34,7 +34,9 @@ pipeline {
                 '''
             }
         }
-         post {
+
+    }
+      post {
             always {
                 sh 'docker logout'
                    sh "chmod +x ./jenkins/scripts/deliver.sh" 
@@ -45,6 +47,4 @@ pipeline {
                 sh "chmod +x ./jenkins/scripts/kill.sh" 
             }
         }
-
-    }
 }
