@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-               withCredentials([gitUsernamePassword(credentialsId: 'cidi_github', gitToolName: 'git-tool')]) {
+               withCredentials([gitUsernamePassword(credentialsId: '53041f50-254f-427c-b223-4f0e2013eb52', gitToolName: 'git-tool')]) {
                     sh 'git fetch --all'
                 }
             }
