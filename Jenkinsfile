@@ -25,7 +25,19 @@ pipeline {
                     docker tag $IMAGE_NAME:$IMAGE_TAG registry.heroku.com/$APP_NAME/web
                     docker push registry.heroku.com/$APP_NAME/web
                 '''
-                sh "chmod +x ./jenkins/scripts/deliver.sh" 
+            }
+        }
+        stage('Release the image') {
+            steps {
+                sh '''
+                heroku container:release web --app=$APP_NAME
+                '''
+            }
+        }
+         post {
+            always {
+                sh 'docker logout'
+                   sh "chmod +x ./jenkins/scripts/deliver.sh" 
                 sh './jenkins/scripts/deliver.sh'
                 sh 'chmod +x ./jenkins/scripts/deploy.sh'
                 sh './jenkins/scripts/deploy.sh'
