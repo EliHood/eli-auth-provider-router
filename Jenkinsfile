@@ -30,7 +30,6 @@ pipeline {
         stage('Release the image') {
             steps {
                 sh '''
-                heroku container:push web
                 heroku container:release web --app=$APP_NAME
                 '''
             }
