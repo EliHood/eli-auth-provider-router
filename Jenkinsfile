@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'curl https://cli-assets.heroku.com/install.sh'
+                sh 'heroku --version'
                 sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
                 sh 'yarn install --ignore-engines'
             }
