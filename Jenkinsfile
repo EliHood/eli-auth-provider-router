@@ -29,6 +29,7 @@ pipeline {
         stage('Release the image') {
             steps {
                 sh '''
+                chmod +x curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
                 curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
                 heroku container:release web --app=$APP_NAME
                 '''
