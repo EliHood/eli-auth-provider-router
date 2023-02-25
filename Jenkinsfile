@@ -22,6 +22,8 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh '''
+                    docker container ls -s
+                    docker image ls
                     docker tag $IMAGE_NAME:$IMAGE_TAG registry.heroku.com/$APP_NAME/web
                     docker push registry.heroku.com/$APP_NAME/web
                 '''
