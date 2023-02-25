@@ -10,7 +10,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'yarn global add heroku'
                 sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
             }
         }
@@ -30,7 +29,7 @@ pipeline {
         stage('Release the image') {
             steps {
                 sh '''
-                heroku container:release web --app=$APP_NAME
+                chmod +x heroku container:release web --app=$APP_NAME
                 '''
             }
         }
