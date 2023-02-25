@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
+                sh 'docker-squash -f -t $IMAGE_NAME:$IMAGE_TAG .'
                 sh 'yarn install --ignore-engines'
             }
         }
