@@ -9,7 +9,8 @@
     "build:watch": "lerna run build:watch --parallel",
     "build:docker": "cd ./examples && yarn build:docker",
     "build": "cd ./examples && yarn build",
-    "build:prod": "cd ./examples && yarn build:prod",
+    "build:package": "cd ./packages/@core:auth-provider-router && yarn build",
+    "build:prod": "yarn build:package && cd ./examples && yarn build:prod",
     "server": "cd ./examples && yarn server"
   },
   "private": true,
