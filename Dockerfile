@@ -9,6 +9,4 @@ USER root:root
 RUN yarn install --ignore-engines
 RUN curl https://cli-assets.heroku.com/install.sh 
 RUN yarn bootstrap
-EXPOSE 3001
-
 CMD ["yarn", "build:prod"]
