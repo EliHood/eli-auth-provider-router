@@ -10,8 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'yarn install'
-                sh 'yarn add -g heroku'
+                sh 'yarn global heroku'
                 sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
             }
         }
