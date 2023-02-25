@@ -21,7 +21,6 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh '''
-                    chmod +x ./jenkins/scripts/test.sh
                     docker tag $IMAGE_NAME:$IMAGE_TAG registry.heroku.com/$APP_NAME/web
                     docker push registry.heroku.com/$APP_NAME/web
                 '''
@@ -30,7 +29,7 @@ pipeline {
         stage('Release the image') {
             steps {
                 sh '''
-                chmod +x heroku container:release web --app=$APP_NAME
+                heroku container:release web --app=$APP_NAME
                 '''
             }
         }
