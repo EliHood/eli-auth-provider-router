@@ -29,6 +29,7 @@ pipeline {
         stage('Release the image') {
             steps {
                 sh '''
+                yarn add global heroku
                 heroku container:release web --app=$APP_NAME
                 '''
             }
