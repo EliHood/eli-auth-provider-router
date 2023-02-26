@@ -12,8 +12,8 @@ export default function App() {
       isProtected: false,
     },
     {
-      routeName: "/home",
-      isProtected: true,
+      routeName: "/login",
+      isProtected: false,
     },
   ];
   return (
