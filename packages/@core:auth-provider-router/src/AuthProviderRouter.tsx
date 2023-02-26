@@ -42,7 +42,7 @@ export function AuthPrivateRoute({
   /**
    * If validate token callback fails, and if route is protected redirect to some unathorized route like a login.
    */
-  if (!validateToken(token) && isProtected) {
+  if (!validateToken?.(token) && isProtected) {
     <Navigate to={routeName} replace={true} />;
   }
   return children;
