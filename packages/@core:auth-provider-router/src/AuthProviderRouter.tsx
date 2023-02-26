@@ -8,7 +8,7 @@ import React, { ReactElement } from "react";
 import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom";
 
 /**
- * @todo support nest routes.
+ * @todo support nested routes.
  */
 type RoutesMap = {
   isProtected: boolean;
