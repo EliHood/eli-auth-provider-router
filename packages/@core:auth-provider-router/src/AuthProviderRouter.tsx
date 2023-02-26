@@ -39,6 +39,9 @@ export function AuthPrivateRoute({
   isProtected,
   validateToken,
 }: AuthPrivateRoute): ReactElement {
+  /**
+   * If validate token callback fails, and if route is protected redirect some unathorized route like a login.
+   */
   if (!validateToken(token) && isProtected) {
     <Navigate to={routeName} replace={true} />;
   }
