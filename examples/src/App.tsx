@@ -16,10 +16,21 @@ export default function App() {
       isProtected: false,
     },
   ];
+
+  const validateToken = (token: string) => {
+    console.log("token:", token);
+    return false;
+  };
   return (
     <>
       <h1>Auth Provider Wrapper</h1>
-      <AuthProviderRouter routes={ourRoutes} />
+      <AuthProviderRouter
+        routes={ourRoutes}
+        validateToken={validateToken}
+        token={
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+        }
+      />
     </>
   );
 }
