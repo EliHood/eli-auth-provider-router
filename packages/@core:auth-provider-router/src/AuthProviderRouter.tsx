@@ -39,7 +39,7 @@ export function AuthPrivateRoute({
   isProtected,
   validateToken,
 }: AuthPrivateRoute): ReactElement {
-  if (!validateToken(token) || isProtected) {
+  if (!validateToken(token) && isProtected) {
     <Navigate to={routeName} replace={true} />;
   }
   return children;
