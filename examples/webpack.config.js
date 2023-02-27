@@ -9,11 +9,13 @@ module.exports = {
     libraryTarget: "umd",
     path: path.resolve(__dirname, "dist"),
   },
+  /**
+   * This external config, causes more headache for some reason.
+   */
   // externals: {
   //   react: "react amd",
   //   "React-DOM": "ReactDOM amd",
   // },
-
   devtool: "source-map",
   module: {
     rules: [

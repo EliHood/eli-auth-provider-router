@@ -4,7 +4,7 @@
  * @param {void} validateToken user will pass their own validate token handler, we will just validate it.
  */
 
-import React, { ReactElement, useEffect } from "react";
+import React, { ReactElement } from "react";
 import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom";
 
 /**
@@ -14,9 +14,13 @@ type RoutesMap = {
   isProtected: boolean;
   routeName: string;
   element?: JSX.Element | ReactElement;
+  redirectTo?: string;
 };
 
 type ValidateToken = {
+  /**
+   * User will add their own logic for decoding tokens, user will need to return a boolean.
+   */
   validateToken?: (token: string) => boolean;
 };
 
@@ -26,18 +30,18 @@ type AuthProviderRouter = {
 } & ValidateToken;
 
 type AuthPrivateRoute = {
-  routeName?: string;
   token?: string;
   children: ReactElement;
   isProtected: boolean;
+  redirectTo: string;
 } & ValidateToken;
 
 export function AuthPrivateRoute({
   children,
-  routeName,
   token,
   isProtected,
   validateToken,
+  redirectTo,
 }: AuthPrivateRoute): ReactElement {
   /**
    * If validate token callback fails, and if route is protected redirect to some unathorized route like a login.
@@ -47,7 +51,7 @@ export function AuthPrivateRoute({
     !validateToken?.(token) &&
     isProtected
   ) {
-    <Navigate to={routeName} replace={true} />;
+    return <Navigate to={redirectTo} replace={true} />;
   }
   return children;
 }
@@ -60,7 +64,7 @@ export function AuthProviderRouter({
   return (
     <BrowserRouter>
       <Routes>
-        {routes.map(({ isProtected, routeName, element }, key) => (
+        {routes.map(({ isProtected, routeName, element, redirectTo }, key) => (
           <Route
             key={key}
             path={routeName}
@@ -69,6 +73,7 @@ export function AuthProviderRouter({
                 validateToken={validateToken}
                 isProtected={isProtected}
                 token={token}
+                redirectTo={redirectTo}
               >
                 {element}
               </AuthPrivateRoute>
