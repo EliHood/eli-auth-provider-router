@@ -76,5 +76,11 @@ module.exports = {
   ],
   resolve: {
     extensions: [".js", ".ts", ".jsx", ".tsx"],
+    alias: {
+      "@core/auth-provider-router": path.resolve(
+        __dirname,
+        "../packages/@core/auth-provider-router"
+      ),
+    },
   },
 };

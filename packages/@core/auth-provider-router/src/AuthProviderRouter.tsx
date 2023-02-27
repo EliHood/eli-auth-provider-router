@@ -4,7 +4,7 @@
  * @param {void} validateToken user will pass their own validate token handler, we will just validate it.
  */
 
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect } from "react";
 import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom";
 
 /**
@@ -57,25 +57,30 @@ export function AuthProviderRouter({
   token,
   validateToken,
 }: AuthProviderRouter) {
+  console.log("teddffst");
+  useEffect(() => {
+    console.log("testing my owl is cool");
+  }, []);
   return (
-    <BrowserRouter>
-      <Routes>
-        {routes.map(({ isProtected, routeName, element }, key) => (
-          <Route
-            key={key}
-            path={routeName}
-            element={
-              <AuthPrivateRoute
-                validateToken={validateToken}
-                isProtected={isProtected}
-                token={token}
-              >
-                {element}
-              </AuthPrivateRoute>
-            }
-          />
-        ))}
-      </Routes>
-    </BrowserRouter>
+    <h1>Test</h1>
+    // <BrowserRouter>
+    //   <Routes>
+    //     {routes.map(({ isProtected, routeName, element }, key) => (
+    //       <Route
+    //         key={key}
+    //         path={routeName}
+    //         element={
+    //           <AuthPrivateRoute
+    //             validateToken={validateToken}
+    //             isProtected={isProtected}
+    //             token={token}
+    //           >
+    //             {element}
+    //           </AuthPrivateRoute>
+    //         }
+    //       />
+    //     ))}
+    //   </Routes>
+    // </BrowserRouter>
   );
 }
