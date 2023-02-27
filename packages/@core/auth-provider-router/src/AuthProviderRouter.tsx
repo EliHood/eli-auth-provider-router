@@ -57,30 +57,25 @@ export function AuthProviderRouter({
   token,
   validateToken,
 }: AuthProviderRouter) {
-  console.log("teddffst");
-  useEffect(() => {
-    console.log("testing my owl is cool");
-  }, []);
   return (
-    <h1>Test</h1>
-    // <BrowserRouter>
-    //   <Routes>
-    //     {routes.map(({ isProtected, routeName, element }, key) => (
-    //       <Route
-    //         key={key}
-    //         path={routeName}
-    //         element={
-    //           <AuthPrivateRoute
-    //             validateToken={validateToken}
-    //             isProtected={isProtected}
-    //             token={token}
-    //           >
-    //             {element}
-    //           </AuthPrivateRoute>
-    //         }
-    //       />
-    //     ))}
-    //   </Routes>
-    // </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        {routes.map(({ isProtected, routeName, element }, key) => (
+          <Route
+            key={key}
+            path={routeName}
+            element={
+              <AuthPrivateRoute
+                validateToken={validateToken}
+                isProtected={isProtected}
+                token={token}
+              >
+                {element}
+              </AuthPrivateRoute>
+            }
+          />
+        ))}
+      </Routes>
+    </BrowserRouter>
   );
 }

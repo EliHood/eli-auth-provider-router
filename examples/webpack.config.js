@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const { ModuleFederationPlugin } = require("webpack").container;
 module.exports = {
   entry: "./src/index.ts",
   mode: "development",
@@ -9,6 +9,11 @@ module.exports = {
     libraryTarget: "umd",
     path: path.resolve(__dirname, "dist"),
   },
+  // externals: {
+  //   react: "react amd",
+  //   "React-DOM": "ReactDOM amd",
+  // },
+
   devtool: "source-map",
   module: {
     rules: [
@@ -72,6 +77,16 @@ module.exports = {
       template: `${__dirname}/public/index.html`,
       filename: "./index.html",
       contentBase: path.join(__dirname, "dist"),
+    }),
+    new ModuleFederationPlugin({
+      shared: {
+        // adds react as shared module
+        react: {
+          requiredVersion: "react",
+          singleton: true,
+          eager: true,
+        },
+      },
     }),
   ],
   resolve: {
