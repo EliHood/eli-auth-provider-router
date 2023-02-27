@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "start": "lerna run start --parallel",
+    "bootstrap": "lerna exec yarn install",
+    "start": "lerna run  --parallel start",
     "build:watch": "lerna run build:watch --parallel",
     "build:docker": "cd ./examples && yarn build:docker",
     "build": "cd ./examples && yarn build",
@@ -13,13 +14,12 @@
     "build:prod": "yarn build:package && cd ./examples && yarn build:prod",
     "server": "cd ./examples && yarn server"
   },
-  "private": true,
   "dependencies": {
     "concurrently": "^7.6.0",
     "lerna": "^6.5.1"
   },
   "workspaces": [
-    "./packages/*",
+    "./packages/@core/auth-provider-router",
     "./examples"
   ]
 }

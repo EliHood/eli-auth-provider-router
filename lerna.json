@@ -1,5 +1,5 @@
 {
-  "packages": ["./packages/*", "./examples"],
+  "packages": ["./packages/@core/auth-provider-router", "./examples"],
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "useWorkspaces": true,
   "version": "0.0.0",
