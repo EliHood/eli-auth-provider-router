@@ -30,7 +30,7 @@ pipeline {
         stage('Release the image') {
             steps {
                 sh '''
-                    docker run escaleno/heroku-cli echo $HEROKU_API_KEY heroku container:release web --app=$APP_NAME          
+                    docker run escaleno/heroku-cli $HEROKU_API_KEY heroku container:release web --app=$APP_NAME          
                 '''
             }
         }
