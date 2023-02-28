@@ -30,7 +30,7 @@ pipeline {
         stage('Release the image') {
             steps {
                 sh '''
-                    docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME $HEROKU_API_KEY         
+                    docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME     
                 '''
             }
         }
