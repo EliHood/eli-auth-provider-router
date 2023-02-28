@@ -10,7 +10,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'yarn run bootstrap'
                 sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
             }
         }
