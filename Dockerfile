@@ -1,5 +1,5 @@
 FROM node:18.14.2-alpine
-FROM finalgene/heroku-cli
+FROM sineverba/heroku-cli
 # COPY . /home/app
 WORKDIR /home/app
 COPY package.json ./

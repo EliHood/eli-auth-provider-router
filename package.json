@@ -15,7 +15,6 @@
     "server": "cd ./examples && yarn server"
   },
   "dependencies": {
-    "concurrently": "^7.6.0",
     "lerna": "^6.5.1"
   },
   "workspaces": [
