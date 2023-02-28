@@ -6,6 +6,6 @@ RUN apk update && apk add git && apk add --no-cache curl && apk add --update pyt
 USER root:root
 FROM escaleno/heroku-cli:7.42.2
 RUN yarn install --production && yarn cache clean --ignore-engines
-
 EXPOSE 3001
+CMD ["yarn", "bootstrap"]
 CMD ["yarn", "build:prod"]
