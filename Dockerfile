@@ -1,6 +1,6 @@
 FROM node:18.14.2-alpine
 FROM finalgene/heroku-cli
-COPY . /home/app
+# COPY . /home/app
 WORKDIR /home/app
 COPY package.json ./
 RUN apk update && apk add git && apk add --no-cache curl && apk add --update python3 make g++ && rm -rf /var/cache/apk/* 
