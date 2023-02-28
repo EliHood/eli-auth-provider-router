@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'yarn lerna clean'
+                sh 'yarn lerna clean --yes'
                 sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
             }
         }
