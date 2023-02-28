@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'yarn lerna clean --yes'
+                sh 'yarn install'
                 sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
             }
         }
@@ -30,7 +30,7 @@ pipeline {
         stage('Release the image') {
             steps {
                 sh '''
-                    echo $HEROKU_API_KEY | docker login --username=_ --password-stdin registry.heroku.com'
+                    echo $HEROKU_API_KEY | docker login --username=_ --password-stdin registry.heroku.com
                     docker run escaleno/heroku-cli heroku container:release web --app=$APP_NAME          
                 '''
             }
