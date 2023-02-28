@@ -17,6 +17,10 @@
     "noImplicitAny": false,
     "rootDir": "./"
   },
+  "paths": {
+    "@core/auth-provider-router": ["packages/@core/auth-provider-router"]
+  },
+  "references": [{ "path": "packages/@core/auth-provider-router" }],
 
   "exclude": ["./src/**/*.test.ts", "./src/**/*.test.tsx", "node_modules"]
 }
