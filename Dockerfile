@@ -1,5 +1,4 @@
 FROM node:18.14.2-alpine
-FROM sue445/heroku-cli
 COPY . /home/app
 WORKDIR /home/app
 COPY package.json ./

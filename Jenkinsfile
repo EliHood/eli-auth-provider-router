@@ -30,7 +30,7 @@ pipeline {
         stage('Release the image') {
             steps {
                 sh '''
-                    docker run sue445/heroku-cli $HEROKU_API_KEY heroku container:release web --app=$APP_NAME          
+                    heroku container:release web --app=$APP_NAME          
                 '''
             }
         }
