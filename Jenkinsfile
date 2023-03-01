@@ -27,6 +27,11 @@ pipeline {
                 '''
             }
         }
+        stage('Install heroku'){
+            steps{
+                sh 'curl https://cli-assets.heroku.com/install.sh | sh'
+            }
+        }
         stage('Release the image') {
             environment{
                 HEROKU_API_KEY = credentials('heroku-api-key')

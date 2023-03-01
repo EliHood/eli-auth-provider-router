@@ -1,8 +1,6 @@
 FROM node:18.14.2-alpine
 FROM sineverba/heroku-cli
 # COPY . /home/app
-RUN curl https://cli-assets.heroku.com/install.sh | sh
-RUN heroku --version
 WORKDIR /home/app
 COPY package.json ./
 RUN apk update && apk add git && apk add --no-cache curl && apk add --update python3 make g++ && rm -rf /var/cache/apk/* 
