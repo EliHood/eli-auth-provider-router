@@ -29,7 +29,8 @@ pipeline {
         }
         stage('Install heroku'){
             steps{
-                sh 'sudo curl https://cli-assets.heroku.com/install.sh | sh'
+               sh "chmod +x ./jenkins/scripts/deploy.sh" 
+               sh './jenkins/scripts/deploy.sh'
             }
         }
         stage('Release the image') {
