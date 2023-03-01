@@ -33,7 +33,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    docker login --username=_ --password-stdin registry.heroku.com
+                    echo $HEROKU_API_KEY | docker login --username=_ --password-stdin registry.heroku.com
                     docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME     
                 '''
             }
