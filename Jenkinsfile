@@ -32,9 +32,10 @@ pipeline {
                 HEROKU_API_KEY = credentials('heroku-api-key')
             }
             steps {
-               sh 'docker logout'
-               sh 'chmod +x ./jenkins/scripts/deploy.sh'
-               sh './jenkins/scripts/deploy.sh'
+                sh '''
+                    docker login --username=_ --password-stdin registry.heroku.com
+                    docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME    
+                '''
             }
         }
 
