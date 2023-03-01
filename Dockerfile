@@ -1,5 +1,5 @@
 FROM node:18.14.2-alpine
-FROM sineverba/heroku-cli
+# FROM sineverba/heroku-cli
 WORKDIR /home/app
 COPY package.json ./
 COPY lerna.json ./
