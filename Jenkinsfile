@@ -34,8 +34,8 @@ pipeline {
             steps {
                 sh '''
                     npx --version
-                    heroku --version  
-                    heroku container:release web --app=$APP_NAME    
+                    npx heroku --version  
+                    HEROKU_API_KEY=${HEROKU_API_KEY} npx heroku container:release web --app=$APP_NAME    
                 '''
             }
         }
