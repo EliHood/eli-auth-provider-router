@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Install heroku'){
             steps{
-                sh 'curl https://cli-assets.heroku.com/install.sh | sh'
+                sh 'chmod +x curl https://cli-assets.heroku.com/install.sh | sh'
             }
         }
         stage('Release the image') {
