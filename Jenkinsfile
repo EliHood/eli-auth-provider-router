@@ -34,6 +34,7 @@ pipeline {
             steps {
                 sh '''
                     set $HEROKU_API_KEY
+                    docker run sineverba/heroku-cli heroku authorizations:create    
                     docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME    
                 '''
             }
