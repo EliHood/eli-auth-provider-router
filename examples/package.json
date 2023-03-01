@@ -8,7 +8,6 @@
     "lint:fix": "yarn run lint --fix",
     "build": "webpack --config webpack.config.js",
     "build:watch": "webpack serve --config webpack.config.js",
-    "heroku-postbuild": "build",
     "server": "node server.js"
   },
   "browserslist": {

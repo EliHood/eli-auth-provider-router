@@ -9,7 +9,6 @@
     "lint:fix": "yarn run lint --fix",
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "heroku-postbuild": "yarn build",
     "test": "jest"
   },
   "browserslist": {
