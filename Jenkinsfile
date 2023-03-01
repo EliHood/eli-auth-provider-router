@@ -32,11 +32,11 @@ pipeline {
                 HEROKU_API_KEY = credentials('heroku-api-key')
             }
             steps {
-                bat "heroku --version"
-                // sh '''
-                //     docker run sineverba/heroku-cli heroku authorizations:create    
-                //     docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME    
-                // '''
+                bat '''
+                    heroku --version
+                    docker run sineverba/heroku-cli heroku authorizations:create    
+                    docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME    
+                '''
             }
         }
 
