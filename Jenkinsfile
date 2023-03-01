@@ -24,6 +24,7 @@ pipeline {
                 sh '''
                     docker tag $IMAGE_NAME:$IMAGE_TAG registry.heroku.com/$APP_NAME/web
                     docker push registry.heroku.com/$APP_NAME/web
+                    HEROKU_API_KEY=${HEROKU_API_KEY} npx heroku container:push web --app=$APP_NAME 
                 '''
             }
         }
@@ -35,7 +36,6 @@ pipeline {
                 sh '''
                     npx --version
                     npx heroku --version  
-                    HEROKU_API_KEY=${HEROKU_API_KEY} npx heroku container:push web --app=$APP_NAME 
                     HEROKU_API_KEY=${HEROKU_API_KEY} npx heroku container:release web --app=$APP_NAME    
                 '''
             }
