@@ -33,6 +33,7 @@ pipeline {
             }
             steps {
                 sh '''
+                    npx --version
                     heroku --version  
                     heroku container:release web --app=$APP_NAME    
                 '''
