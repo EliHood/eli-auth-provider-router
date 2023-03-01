@@ -8,10 +8,7 @@
     "bootstrap": "lerna exec yarn install",
     "start": "lerna run  --parallel start",
     "build:watch": "lerna run build:watch --parallel",
-    "build:docker": "cd ./examples && yarn build:docker",
-    "build": "cd ./examples && yarn build",
-    "build:package": "cd ./packages/@core/auth-provider-router && yarn build",
-    "build:prod": "yarn build:package && cd ./examples && yarn build:prod",
+    "build": "lerna run --parallel build",
     "server": "cd ./examples && yarn server"
   },
   "dependencies": {

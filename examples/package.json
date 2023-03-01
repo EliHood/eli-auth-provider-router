@@ -7,9 +7,7 @@
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "yarn run lint --fix",
     "build": "webpack --config webpack.config.js",
-    "build:docker": "yarn build && yarn server",
     "build:watch": "webpack serve --config webpack.config.js",
-    "build:prod": "yarn build && yarn server",
     "server": "node server.js"
   },
   "browserslist": {
