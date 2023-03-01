@@ -33,7 +33,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    docker run sineverba/heroku-cli heroku container:login
+                    docker run sineverba/heroku-cli heroku login
                     docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME     
                 '''
             }
