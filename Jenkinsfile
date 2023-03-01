@@ -27,12 +27,6 @@ pipeline {
                 '''
             }
         }
-        stage('Install heroku'){
-            steps{
-               sh "chmod +x ./jenkins/scripts/deploy.sh" 
-               sh './jenkins/scripts/deploy.sh'
-            }
-        }
         stage('Release the image') {
             environment{
                 HEROKU_API_KEY = credentials('heroku-api-key')
