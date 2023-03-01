@@ -28,9 +28,12 @@ pipeline {
             }
         }
         stage('Release the image') {
+            environment{
+                HEROKU_API_KEY = credentials('heroku-api-key')
+            }
             steps {
                 sh '''
-                    echo $HEROKU_API_KEY | docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME     
+                    docker run sineverba/heroku-cli heroku container:release web --app=$APP_NAME     
                 '''
             }
         }
