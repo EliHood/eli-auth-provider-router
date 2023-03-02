@@ -5,9 +5,8 @@ RUN apk update && apk add git && apk add --no-cache curl && apk add --update pyt
 USER root:root
 WORKDIR /home/app
 COPY heroku.sh .
-RUN yarn install --production --ignore-engines && yarn cache clean
-# heroku wont know what our directories are, so we must specify them
-COPY ./examples ./
-copy ./packages ./
+RUN yarn install --production --ignore-engines && yarn cache clean 
+# heroku wont know what our directories are
+COPY . .
 EXPOSE 3001
 CMD ["./heroku.sh"]
