@@ -1,9 +1,10 @@
 FROM node:18.14.2-alpine
-WORKDIR /home/app
 COPY package.json ./
 COPY lerna.json ./
 RUN apk update && apk add git && apk add --no-cache curl && apk add --update python3 make g++ && rm -rf /var/cache/apk/* 
 USER root:root
+WORKDIR /home/app
 RUN yarn install --ignore-engines && yarn cache clean && yarn bootstrap && yarn build
+COPY . .
 EXPOSE 3001
 CMD ["yarn", "server"]

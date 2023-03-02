@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   examples:
-    build: ./examples
+    build: .
     image: examples
     working_dir: /home/node/app
     volumes:
