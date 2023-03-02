@@ -2,6 +2,7 @@
 
 echo 'Deploying to heroku'
 set -x
+yarn run server
 yarn install 
 yarn run bootstrap
 yarn run build
