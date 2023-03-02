@@ -10,4 +10,4 @@ app.get("/*", function (req, res) {
   console.log("this works");
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
-app.listen(port);
+app.listen(port, "0.0.0.0");
