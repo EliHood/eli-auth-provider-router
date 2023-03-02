@@ -6,5 +6,8 @@ USER root:root
 WORKDIR /home/app
 COPY heroku.sh .
 RUN yarn install --production --ignore-engines && yarn cache clean && yarn bootstrap && yarn build
+# heroku wont know what our directories are, so we must specify them
+COPY ./examples ./
+copy ./packages ./
 EXPOSE 3001
 CMD ["./heroku.sh"]
