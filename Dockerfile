@@ -9,4 +9,5 @@ RUN yarn install --production --ignore-engines && yarn cache clean
 # heroku wont know what our directories are
 COPY . .
 EXPOSE 3001
+ENV PORT=5000
 CMD ["./heroku.sh"]
