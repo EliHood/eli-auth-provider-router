@@ -1,6 +1,7 @@
 build:
   docker:
     web: Dockerfile
+
 eli-auth-provider-router:
   command:
     - ./heroku.sh
