@@ -5,4 +5,4 @@ build:
 eli-auth-provider-router:
   command:
     - ./heroku.sh
-  image: heroku-install
+  image: worker
