@@ -2,7 +2,7 @@ build:
   docker:
     web: Dockerfile
 
-eli-auth-provider-router:
+release:
   command:
     - ./heroku.sh
   image: worker
