@@ -9,7 +9,7 @@
     "start": "lerna run  --parallel start",
     "build:watch": "lerna run build:watch --parallel",
     "build": "lerna run --parallel build",
-    "server": "cd ./examples && yarn server"
+    "server": "yarn run bootstrap && cd ./examples && yarn server"
   },
   "dependencies": {
     "lerna": "^6.5.1"
