@@ -10,4 +10,4 @@ COPY heroku.sh .
 # heroku wont know what our directories are
 COPY . .
 EXPOSE $PORT
-CMD ["yarn", "run", "server"]
+CMD ["heroku.sh"]
