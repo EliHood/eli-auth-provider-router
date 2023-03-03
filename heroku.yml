@@ -1,7 +1,7 @@
 build:
   docker:
     web: Dockerfile
-release:
+eli-auth-provider-router:
   command:
     - ./heroku.sh
   image: heroku-install
