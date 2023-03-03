@@ -7,4 +7,4 @@ services:
     volumes:
       - ./:/home/node/app
     ports:
-      - $PORT:5000
+      - 3001:3001

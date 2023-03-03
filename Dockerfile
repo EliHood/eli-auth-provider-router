@@ -9,4 +9,4 @@ RUN yarn install --production --ignore-engines && yarn cache clean
 # heroku wont know what our directories are
 COPY . .
 EXPOSE $PORT
-CMD ["./heroku.sh"]
+CMD ["./heroku.sh -p $PORT"]
