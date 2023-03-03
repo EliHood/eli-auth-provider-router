@@ -10,7 +10,8 @@
     "build:watch": "lerna run build:watch --parallel",
     "build": "lerna run --parallel build",
     "server": "cd ./examples && yarn server",
-    "heroku-postbuild": "yarn install"
+    "heroku-postbuild": "yarn install",
+    "init-server": "cd ./examples && yarn install && yarn server"
   },
   "dependencies": {
     "lerna": "^6.5.1"
