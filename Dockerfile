@@ -15,5 +15,5 @@ RUN yarn install --production --ignore-engines && yarn cache clean
 
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-CMD ['./heroku.sh']
+CMD ['sh ./heroku.sh']
 
