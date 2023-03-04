@@ -15,4 +15,4 @@ FROM nginx:alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-CMD sed -e 's/$PORT/'"$PORT"'/g' && nginx -g 'daemon off;'
+CMD sed -i -e 's/$PORT/'"$PORT"'/g' nginx.conf && nginx -g 'daemon off;'
