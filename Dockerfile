@@ -8,12 +8,6 @@ COPY heroku.sh .
 
 # heroku wont know what our directories are
 COPY . .
+EXPOSE $PORT
 RUN yarn install --production --ignore-engines && yarn cache clean 
-# EXPOSE $PORT
-
-# FROM nginx:alpine
-
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-CMD ['sh ./heroku.sh']
-
+CMD ["./heroku.sh",]
