@@ -10,4 +10,4 @@ COPY heroku.sh .
 COPY . .
 EXPOSE $PORT
 RUN yarn install --production --ignore-engines && yarn cache clean 
-CMD ["./heroku.sh",]
+CMD ["./heroku.sh"]
