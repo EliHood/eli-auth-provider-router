@@ -9,5 +9,5 @@ COPY heroku.sh .
 # heroku wont know what our directories are
 COPY . .
 EXPOSE $PORT
-RUN yarn install --production --ignore-engines && yarn cache clean && yarn bootstrap && yarn build
+RUN yarn install --production --ignore-engines && yarn bootstrap && yarn build
 CMD ["./heroku.sh"]
