@@ -11,16 +11,11 @@ COPY tsconfig.base.json ./
 
 RUN yarn install --frozen-lockfile --production --ignore-engines && yarn cache clean
 
-COPY ./examples /home/app/examples
-COPY ./examples/package.json /home/app/examples/
-COPY ./examples/yarn.lock /home/app/examples/
+COPY ./examples /home/app/examples/
 
-
-COPY ./packages/@core/auth-provider-router/ /home/app/packages/@core/auth-provider-router/
-COPY ./packages/@core/auth-provider-router/package.json /home/app/packages/@core/auth-provider-router/
-COPY ./packages/@core/auth-provider-router/yarn.lock /home/app/packages/@core/auth-provider-router/
+COPY ./packages/@core/auth-provider-router /home/app/packages/@core/auth-provider-router/
 
 # docker does not like yarn run bootstrap for some reason, as its failing. 
-# RUN yarn run bootstrap
+RUN yarn run bootstrap
 RUN yarn build
 CMD ["yarn", "run", "server"]
