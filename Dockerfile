@@ -7,6 +7,7 @@ COPY heroku.sh .
 # heroku wont know what our directories are
 COPY package.json ./
 COPY lerna.json ./
+COPY tsconfig.base.json ./
 COPY ./examples /home/app/examples
 COPY ./examples/package.json /home/app/examples/
 COPY ./examples/yarn.lock /home/app/examples/
