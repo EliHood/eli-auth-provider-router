@@ -13,9 +13,10 @@ RUN yarn install --frozen-lockfile --production --ignore-engines && yarn cache c
 
 COPY ./examples /home/app/examples/
 
-COPY ./packages/@core/auth-provider-router /home/app/packages/@core/auth-provider-router/
+COPY ./packages/@core/autfh-provider-router /home/app/packages/@core/auth-provider-router/
 
-# docker does not like yarn run bootstrap for some reason, as its failing. 
+# docker does not like yarn run bootstrap for some reason, as its failing.
+RUN rm -rf node_modules && yarn cache clean && yarn install --frozen-lockfile --production --ignore-engines
 RUN yarn run bootstrap
 RUN yarn build
 CMD ["yarn", "run", "server"]
