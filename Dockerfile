@@ -8,9 +8,8 @@ COPY heroku.sh .
 
 # heroku wont know what our directories are
 COPY . .
-USER root:root
 RUN yarn install --frozen-lockfile --production --ignore-engines && yarn cache clean
 # docker does not like yarn run bootstrap for some reason, as its failing. 
-RUN yarn run package-install && yarn run examples-install
+RUN yarn run package-install cache clean && yarn run examples-install cache clean
 RUN yarn build
 CMD ["yarn", "run", "server"]
