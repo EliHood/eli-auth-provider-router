@@ -9,7 +9,8 @@ COPY heroku.sh .
 # heroku wont know what our directories are
 COPY . .
 EXPOSE $PORT
-RUN npm install npm 
+RUN npm install --global yarn
+RUN yarn --version
 RUN yarn install --frozen-lockfile --production --ignore-engines && yarn run bootstrap
 
 CMD ["./heroku.sh"]
