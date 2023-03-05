@@ -7,9 +7,20 @@ WORKDIR /home/app
 COPY heroku.sh .
 
 # heroku wont know what our directories are
-COPY . .
-RUN yarn install --frozen-lockfile --production --ignore-engines && yarn cache clean
+# COPY . .
+
 # docker does not like yarn run bootstrap for some reason, as its failing. 
-RUN yarn run package-install && yarn run examples-install
+# RUN yarn run package-install && yarn run examples-install
+# RUN yarn run bootstrap /home/app
+
+COPY examples/package.json /home/app/examples
+COPY examples/yarn.lock /home/app/examples
+
+COPY packages/@core/auth-provider-router/package.json  /home/app/packages/@core/auth-provider-router 
+COPY packages/@core/auth-provider-router/yarn.lock  /home/app/packages/@core/auth-provider-router 
+
+RUN yarn install --frozen-lockfile --production --ignore-engines && yarn cache clean
+
+RUN yarn run bootstrap 
 RUN yarn build
 CMD ["yarn", "run", "server"]
