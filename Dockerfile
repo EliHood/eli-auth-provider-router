@@ -9,11 +9,5 @@ COPY heroku.sh .
 # heroku wont know what our directories are
 COPY . .
 RUN yarn install --frozen-lockfile --production --ignore-engines
-RUN yarn add @babel/helpers @babel/core 
-RUN yarn run bootstrap
-EXPOSE $PORT
-
-
-CMD ["./heroku.sh"]
-
+CMD ["yarn run server"]
 # CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
