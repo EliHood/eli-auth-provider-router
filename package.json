@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "bootstrap": "lerna exec yarn install",
+    "bootstrap": "lerna exec yarn install --frozen-lockfile",
     "start": "lerna run  --parallel start",
     "build:watch": "lerna run build:watch --parallel",
     "build": "lerna run --parallel build",
