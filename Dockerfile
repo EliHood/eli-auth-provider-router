@@ -6,14 +6,16 @@ USER root:root
 WORKDIR /home/app
 COPY heroku.sh .
 
+FROM nginx:alpine
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # heroku wont know what our directories are
 COPY . .
 EXPOSE $PORT
 RUN yarn install --production --ignore-engines && yarn cache clean 
 
-FROM nginx:alpine
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 CMD ["./heroku.sh"]
 
