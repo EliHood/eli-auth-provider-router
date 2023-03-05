@@ -8,6 +8,6 @@ COPY heroku.sh .
 
 # heroku wont know what our directories are
 COPY . .
-RUN yarn install --frozen-lockfile --production --ignore-engines
-CMD ["yarn run server"]
+RUN yarn install --frozen-lockfile --production --ignore-engines && yarn build
+CMD ["yarn", "run", "server"]
 # CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
