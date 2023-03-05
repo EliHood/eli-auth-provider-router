@@ -5,6 +5,7 @@ RUN apk update && apk add git && apk add --no-cache curl && apk add --update pyt
 USER root:root
 WORKDIR /home/app
 COPY ./examples  /home/app/
+COPY ./packages/@core/auth-provider-router  /home/app/
 COPY heroku.sh .
 
 # heroku wont know what our directories are
