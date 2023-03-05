@@ -9,7 +9,7 @@ COPY heroku.sh .
 # heroku wont know what our directories are
 COPY . .
 EXPOSE $PORT
-RUN yarn install --frozen-lockfile --production --ignore-engines && yarn cache clean && yarn run bootstrap && yarn build
+RUN yarn install --frozen-lockfile --production --ignore-engines && yarn cache clean && yarn run bootstrap
 
 CMD ["./heroku.sh"]
 
