@@ -4,8 +4,8 @@ COPY lerna.json ./
 RUN apk update && apk add git && apk add --no-cache curl && apk add --update python3 make g++ && rm -rf /var/cache/apk/* 
 USER root:root
 WORKDIR /home/app
-COPY ./examples  /home/app/
-COPY ./packages/@core/auth-provider-router  /home/app/
+COPY ./examples  /home/app/examples
+COPY ./packages/@core/auth-provider-router  /home/app/packages/@core/auth-provider-router
 COPY heroku.sh .
 
 # heroku wont know what our directories are
