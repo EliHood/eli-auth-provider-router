@@ -10,7 +10,7 @@ COPY heroku.sh .
 COPY . .
 USER root:root
 RUN yarn install --frozen-lockfile --production --ignore-engines
+# docker does not like yarn run bootstrap for some reason, as its failing. 
 RUN yarn run package-install && yarn run examples-install
 RUN yarn build
 CMD ["yarn", "run", "server"]
-# CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
