@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna exec yarn install",
-    "package-install": "cd ./examples && yarn install",
-    "examples-install": "cd ./packages/@core/auth-provider-router && yarn install",
+    "package-install": "cd ./examples && yarn install && yarn clean cache",
+    "examples-install": "cd ./packages/@core/auth-provider-router && yarn install && yarn clean cache",
     "start": "lerna run  --parallel start",
     "build:watch": "lerna run build:watch --parallel",
     "build": "lerna run --parallel build",
