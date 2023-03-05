@@ -12,7 +12,7 @@ COPY heroku.sh .
 # docker does not like yarn run bootstrap for some reason, as its failing. 
 # RUN yarn run package-install && yarn run examples-install
 # RUN yarn run bootstrap /home/app
-ADD examples ./ /home/app/examples
+ADD examples ./ /home/app/examples/
 ADD examples/package.json /home/app/examples
 ADD examples/yarn.lock /home/app/examples
 
