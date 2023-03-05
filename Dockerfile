@@ -16,7 +16,7 @@ COPY ./examples/package.json /home/app/examples/
 COPY ./examples/yarn.lock /home/app/examples/
 
 
-COPY ./packages/@core/auth-provider-router /home/app/packages/@core/auth-provider-router/
+COPY ./packages/@core/auth-provider-router/ /home/app/packages/@core/auth-provider-router/
 COPY ./packages/@core/auth-provider-router/package.json /home/app/packages/@core/auth-provider-router/
 COPY ./packages/@core/auth-provider-router/yarn.lock /home/app/packages/@core/auth-provider-router/
 
