@@ -9,6 +9,7 @@ COPY heroku.sh .
 # heroku wont know what our directories are
 COPY . .
 RUN yarn install --frozen-lockfile --production --ignore-engines
+RUN yarn add @babel/helpers @babel/core 
 RUN yarn run bootstrap
 EXPOSE $PORT
 
