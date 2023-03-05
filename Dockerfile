@@ -7,7 +7,7 @@ WORKDIR /home/app
 COPY heroku.sh .
 
 # heroku wont know what our directories are
-# COPY . .
+COPY . .
 
 # docker does not like yarn run bootstrap for some reason, as its failing. 
 # RUN yarn run package-install && yarn run examples-install
